@@ -1,0 +1,387 @@
+<html>
+  <head>
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  </head>
+  <style>
+    body, html {
+      overflow-x: hidden;
+    }
+    .tombol {
+      color: black;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      height: 640px;
+      background-image: url('img/hero.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50px;
+    }
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .btn-purple {
+      background-color: #6f42c1;
+      color: white;
+    }
+    .nav-pills .nav-link.active {
+      background-color: black;
+      color: white;
+      text-decoration: none;
+    }
+    .nav-link {
+      color: black;
+    }
+    .link {
+      color: grey;
+      text-decoration: none;
+    }
+    .link:hover {
+      color: white;
+      background-color: black;
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-4" x-data="{ open:false }">
+      <div class="container">
+        <a class="navbar-brand fw-bold">
+          TripCo
+        </a>
+        <button class="navbar-toggler" @click="open = !open">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" :class="{ show : open }">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link">Home</a>
+            <a class="nav-link">Ticket</a>
+            <a class="nav-link">Explore</a>
+            <a class="nav-link">Activity</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Hero -->
+    <section class="container">
+      <div class="row hero">
+        <div class="col-md align-self-center text-center">
+          <h1 class="display-1 text-white text-shadow">Explore the whole world<br>and enjoy its beauty</h1>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Popular Place -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-5">
+          <h1 class="fw-bold">Popular Place</h1>
+          <p class="lead">Lets enjoy this heaven on earth</p>
+        </div>
+        <div class="col-md-7">
+          <p class="lead">Many places are very famous, beautiful, clean, and will give a very deep impression to visitor and will make them comeback</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 p-4">
+          <img src="img/place1.jpg" class="img-fluid rounded-4">
+          <h5 class="fw-bold pt-3">SC. Mindanao</h5>
+          <div class="d-flex">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p class="fw-light px-2">Mindanao, Fillipina</p>
+          </div>
+        </div>
+        <div class="col-md-3 p-4">
+          <img src="img/place1.jpg" class="img-fluid rounded-4">
+          <h5 class="fw-bold pt-3">SC. Mindanao</h5>
+          <div class="d-flex">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p class="fw-light px-2">Mindanao, Fillipina</p>
+          </div>
+        </div>
+        <div class="col-md-3 p-4">
+          <img src="img/place1.jpg" class="img-fluid rounded-4">
+          <h5 class="fw-bold pt-3">SC. Mindanao</h5>
+          <div class="d-flex">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p class="fw-light px-2">Mindanao, Fillipina</p>
+          </div>
+        </div>
+        <div class="col-md-3 p-4">
+          <img src="img/place1.jpg" class="img-fluid rounded-4">
+          <h5 class="fw-bold pt-3">SC. Mindanao</h5>
+          <div class="d-flex">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p class="fw-light px-2">Mindanao, Fillipina</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sweet memories -->
+    <div class="container mt-5">
+      <div class="row text-center">
+        <h1 class="fw-bold">Travel to make sweet memories</h1>
+        <p class="lead">find trips that fit a flexible lifestyle</p>
+        </div>
+      <div class="row justify-content-between mt-5">
+        <div class="col-md-5">
+          <div class="btn btn-primary">1</div>
+          <h5 class="fw-bold pt-2">Find trips that fit your freedom</h5>
+          <p class="fw-light">Travellling offers freedom and flexibility, solitude, and spontanetly, and privacy and purpose</p>
+          <div class="btn btn-purple">2</div>
+          <h5 class="fw-bold pt-2">Find trips that fit your freedom</h5>
+          <p class="fw-light">Travellling offers freedom and flexibility, solitude, and spontanetly, and privacy and purpose</p>
+          <div class="btn btn-success">3</div>
+          <h5 class="fw-bold pt-2">Find trips that fit your freedom</h5>
+          <p class="fw-light">Travellling offers freedom and flexibility, solitude, and spontanetly, and privacy and purpose</p>
+          <a class="mt-5 btn btn-info"style="color:white">Start your explore</a>
+        </div>
+        <div class="col-md-4">
+          <img src="img/memories.jpg" class="img-fluid rounded-5">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Explore more -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-5">
+          <h1 class="fw-bold">Explore more</h1>
+          <p class="lead">Lets go on an adventure</p>
+        </div>
+        <div class="col-md-7">
+          <p class="lead">All-inclusive vacation and flights to Carribean, Indonesian and more than 1,300 destination worldwide. Lets explore now</p>
+        </div>
+      </div>
+      <div class="container py-5" x-data="{ tab: 'island' }">
+  <!-- Tabs Navigation -->
+        <ul class="nav nav-pills">
+          <li class="nav-item me-3">
+            <a href="#" class="nav-link" :class="{ 'active': tab === 'island' }" @click.prevent="tab = 'island'">Island</a>
+          </li>
+          <li class="nav-item me-3">
+            <a href="#" class="nav-link" :class="{ 'active': tab === 'lake' }" @click.prevent="tab = 'lake'">Lake</a>
+          </li>
+          <li class="nav-item me-3">
+            <a href="#" class="nav-link" :class="{ 'active': tab === 'beach' }" @click.prevent="tab = 'beach'">Beach</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" :class="{ 'active': tab === 'camp' }" @click.prevent="tab = 'camp'">Camp</a>
+          </li>
+        </ul>
+      
+        <!-- Tabs Content -->
+        <div class="pt-3">
+          <div class="row" x-show="tab === 'island'">
+            <div class="col-md-4 p-3">
+              <img src="img/Explore.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Komodo island</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">NTT, Indonesia</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/Explore.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Komodo island</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">NTT, Indonesia</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/Explore.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Komodo island</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">NTT, Indonesia</p>
+              </div>
+            </div>
+          </div>
+          <div class="row" x-show="tab === 'lake'">
+            <div class="col-md-4 p-3">
+              <img src="img/lake.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Lake leonida</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Miami, USA</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/lake.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Lake leonida</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Miami, USA</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/lake.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Lake leonida</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Miami, USA</p>
+              </div>
+            </div>
+          </div>
+          <div class="row" x-show="tab === 'beach'">
+            <div class="col-md-4 p-3">
+              <img src="img/beach.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">East Beach</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Los Angeles, California</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/beach.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">East Beach</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Los Angeles, California</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/beach.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">East Beach</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Los Angeles, California</p>
+              </div>
+            </div>
+          </div>
+          <div class="row" x-show="tab === 'camp'">
+            <div class="col-md-4 p-3">
+              <img src="img/camp.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Shady Forrest</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Kalimantan, Indonesia</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/camp.jpg" class="img-fluid rounded-4">
+              <h5 class="fw-bold pt-3">Shady Forrest</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Kalimantan, Indonesia</p>
+              </div>
+            </div>
+            <div class="col-md-4 p-3">
+              <img src="img/camp.jpg" class="img-fluid rounded-4">
+            <h5 class="fw-bold pt-3">Shady Forrest</h5>
+              <div class="d-flex">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="fw-light px-2">Kalimantan, Indonesia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md text-center">
+          <a class="btn btn-outline-dark">Show more</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Adventure -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md text-center">
+          <h1 class="fw-bold">Lets go on an adventure</h1>
+          <p class="lead">Find a great experience</p>
+        </div>
+      </div>
+      <!-- Slider -->
+      <div class="row py-5">
+        <div class="glide text-center">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide p-3"><img src="img/bali.jpg" class="img-fluid">
+              <p class="h5">Bali</p></li>
+              <li class="glide__slide p-3"><img src="img/jakarta.jpg" class="img-fluid">
+              <p class="h5">Jakarta</p></li>
+              <li class="glide__slide p-3"><img src="img/seoul.jpg" class="img-fluid">
+              <p class="h5">Seoul</p></li>
+              <li class="glide__slide p-3"><img src="img/california.jpg" class="img-fluid">
+              <p class="h5">California</p></li>
+              <li class="glide__slide p-3"><img src="img/malaysia.jpg" class="img-fluid">
+              <p class="h5">Malaysia</p></li>
+            </ul>
+          </div>
+          <div class="glide__arrows text-center mt-5" data-glide-el="controls">
+            <a class="glide__arrow glide__arrow--left tombol fs-1" data-glide-dir="<"><i class="bi bi-arrow-left-circle"></i></a>
+            <a class="glide__arrow glide__arrow--right tombol fs-1" data-glide-dir=">"><i class="bi bi-arrow-right-circle"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Footer -->
+    <div class="container">
+      <hr>
+      <div class="row justify-content-between p-5">
+        <div class="col-md-3">
+          <h3 class="fw-bold">TripCo</h3>
+          <p class="fw-light">Jl. Karangkambang no1, Desa Bojongsari, Kecamatan Kedungreja, Kabupaten Cilacap</p>
+          <p><span class="p-2"><i class="bi bi-facebook"></i></span><span class="p-2"><i class="bi bi-instagram"></i></span><span class="p-2"><i class="bi bi-twitter"></i></span></p>
+          </div>
+          <div class="col-md-2">
+            <h3 class="fw-bold">About</h3>
+            <p><a class="link">About us</a></p>
+            <p><a class="link">Features</a></p>
+            <p><a class="link">News</a></p>
+            <p><a class="link">Plans</a></p>
+          </div>
+          <div class="col-md-2">
+            <h3 class="fw-bold">Company</h3>
+            <p><a class="link">Why TripCo</a></p>
+            <p><a class="link">Partner with us</a></p>
+            <p><a class="link">F.A.Q</a></p 
+            <p><a class="link">Blog</a></p>
+          </div>
+          <div class="col-md-2">
+            <h3 class="fw-bold">Support</h3>
+            <p><a class="link">Account</a></p>
+            <p><a class="link">Support center</a></p>
+            <p><a class="link">FeedBack</a></p>
+            <p><a class="link">Contact us</a></p>
+          </div>
+          <div class="col-md-3">
+            <h3 class="fw-bold">Newsletter</h3>
+            <p class="fw-light">Subscribe our newsletter and get exciting offers</p>
+            <form action="">
+              <input type="email" class="form-control" placeholder="Enter your email addres">
+              <button type="submit" class="mt-3 btn btn-outline-dark"><i class="bi bi-send p-3 email"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      new Glide(".glide", {
+        type : 'carousel',
+        perView : 4,
+        breakpoints : {
+          768: {
+            perView : 1,
+            autoplay : 3000
+          }
+        }
+      }).mount()
+    </script>
+  </body>
+</html>
